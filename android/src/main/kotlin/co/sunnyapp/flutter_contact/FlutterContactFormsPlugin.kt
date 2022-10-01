@@ -82,7 +82,7 @@ class FlutterContactForms(private val plugin: FlutterContactPlugin, private val 
 
     private fun startIntent(intent: Intent, request: Int) {
         if (registrar.activity() != null) {
-            registrar.activity().startActivityForResult(intent, request)
+            registrar.activity()!!.startActivityForResult(intent, request)
         } else {
             registrar.context().startActivity(intent)
         }
